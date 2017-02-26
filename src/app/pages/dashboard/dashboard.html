@@ -1,0 +1,151 @@
+<dashboard-pie-chart></dashboard-pie-chart>
+
+<div class="row">
+  <div id="lineChart" class="admin-chart" ng-controller="LineChartCtrl"></div>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-6 col-md-12 col-sm-12" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Bookings aggregated by hours" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12" ng-controller="chartJs1DCtrl">
+        <div ba-panel ba-panel-title="Bookings" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <canvas id="doughnut" chart-options="options" class="chart chart-doughnut"
+                          chart-data="data" chart-labels="labels">
+                  </canvas>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="panel panel-info contextual-example-panel bootstrap-panel">
+                      <div class="panel-heading">Bookings {{data[0]+data[1]}}</div>
+                      <div class="panel-body">
+                        Car2go fleet: {{fleet[0]}}
+                        <br>
+                        Enjoy fleet: {{fleet[1]}}
+                      </div>
+                    </div>
+                  
+                    <div class="panel panel-success contextual-example-panel bootstrap-panel">
+                      <div class="panel-heading">Car utilization / day</div>
+                      <div class="panel-body">
+                        Books Car2Go: {{books_car[0]}}
+                        <br>
+                        Books Enjoy: {{books_car[1]}}
+                      </div>
+                    </div>
+
+                </div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="row">
+  <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-xlg-8 col-lg-12 col-md-12 col-sm-7 col-xs-12"
+           ba-panel
+           ba-panel-title="Revenue"
+           ba-panel-class="medium-panel">
+        <dashboard-line-chart></dashboard-line-chart>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  
+<!--     <div class="col-lg-6 col-md-12 col-sm-12" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Car Sharing vs Public Transport" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="col-lg-6 col-md-12 col-sm-12" ng-controller="chartJs2DCtrl2">
+        <div ba-panel ba-panel-title="CarSharing vs Public Transport Duration" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12" ng-controller="chartJs2DCtrl3">
+        <div ba-panel ba-panel-title="Forecast Bill" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="bill" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- <div class="row "> -->
+<!--     <div class="col-lg-4 col-md-6" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Radar" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="radar" class="chart chart-radar" chart-series="series" chart-data="data"
+                        chart-labels="labels">
+                </canvas>
+            </div>
+        </div>
+    </div> -->
+<!--     <div class="col-md-12" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Car Sharing vs Public Transport" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div> -->
+
+<!--     <div class="col-md-12" ng-controller="chartJs2DCtrl2">
+        <div ba-panel ba-panel-title="Car Sharing vs Public Transport" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-options="options"></canvas>
+            </div>
+        </div>
+    </div>  -->
+
+<!--     <div class="col-lg-4 col-md-12" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Bars" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="bar" class="chart chart-bar"
+                        chart-data="data" chart-labels="labels" chart-series="series">
+                </canvas>
+            </div>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+<!-- <div class="row">
+      <div class="col-lg-4 col-md-6" ng-controller="chartJs2DCtrl_Businesss_Week">
+        <div ba-panel ba-panel-title="Line" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="line2" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-option="options"></canvas>
+            </div>
+        </div>
+    </div>
+</div> -->
+
