@@ -21,11 +21,11 @@
       stats: '52'
     }, {
       color: pieColor,
-      description: 'Books',
+      description: 'Bookings',
       stats: '216532'
     }, {
       color: pieColor,
-      description: 'Parks',
+      description: 'Parkings',
       stats: '216532'
     }
     ];

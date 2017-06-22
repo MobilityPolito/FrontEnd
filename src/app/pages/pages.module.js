@@ -28,7 +28,7 @@
 
           var req = {
           method: 'post',
-          url: 'http://localhost:8000/stats/api',
+          url: 'http://turinmobility.tk/stats',
           data: JSON.stringify(
              { start : startDate,
                end: endDate })
